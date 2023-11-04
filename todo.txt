@@ -1,0 +1,21 @@
+https://docpulse.com/products/patient-management-system/
+
+https://clinicia.com/
+
+TODO: 
+    Home:
+    Contact Us Form
+    Customer Reviews/Ratings
+    Request Demo
+    More Stock images
+    Features (Clinicia)
+
+    Header:
+    Phone #/Email for Sales in header
+
+    Footer:
+    Contact information, address
+    
+    Overall:
+    Generate convincing PMS text
+    Add Support Agent bubble bottom right
