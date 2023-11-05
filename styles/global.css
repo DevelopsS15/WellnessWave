@@ -8,3 +8,39 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/*  */
+/*  */
+/*  */
+
+.tech-slideshow {
+  height: 154px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.tech-slideshow>div {
+  height: 154px;
+  transform: translate3d(0, 0, 0);
+}
+
+.tech-slideshow .mover-1 {
+  animation: moveSlideshow 60s linear infinite;
+}
+
+@keyframes moveSlideshow {
+  0% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(-1473px);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}

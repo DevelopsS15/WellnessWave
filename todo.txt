@@ -1,11 +1,10 @@
 https://docpulse.com/products/patient-management-system/
-
 https://clinicia.com/
+https://www.clearwaveinc.com/patient-engagement-software
+https://v0.dev/pricing
 
 TODO: 
     Home:
-    Contact Us Form
-    Customer Reviews/Ratings
     Request Demo
     More Stock images
     Features (Clinicia)
@@ -14,8 +13,11 @@ TODO:
     Phone #/Email for Sales in header
 
     Footer:
-    Contact information, address
     
     Overall:
     Generate convincing PMS text
     Add Support Agent bubble bottom right
+
+
+Fraser Health
+Coastal Health

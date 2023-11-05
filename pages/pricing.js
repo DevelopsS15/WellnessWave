@@ -7,17 +7,17 @@ import Link from "next/link";
 
 export default function Pricing() {
 
-    const featuresForBasic = ["Electronic Medical Records", "Appointment Calendar", "Expense Management", "Number Of Doctors: 25", "Number of Receptionists: 5", "Number of Clinics: 1"];
-    const featuresForPro = ["Everything from Basic", "SLO/SAML Authentication", "24/7 Email Support", "100+ External Integrations", "Number Of Doctors: 250", "Number of Receptionists: 100", "Number of Clinics: 5"]
-    const featuresForEnterprise = ["Everything from Pro", "Custom SLA", "Role-Based Permissions", "24/7 Call Support", "Number Of Doctors: Unlimited", "Number of Receptionists: Unlimited", "Number of Clinics: Unlimited"];
+    const featuresForBasic = ["Electronic Medical Records", "Appointment Calendar", "Expense Management", "Email Notifications", "SMS Notifications (Market Rate)", "Number Of Doctors: 25", "Number of Receptionists: 5", "Number of Clinics: 1"];
+    const featuresForPro = ["Everything from Basic", "1,000 SMS included", "SLO/SAML Authentication", "Email Support", "100+ External Integrations", "Number Of Doctors: 250", "Number of Receptionists: 100", "Number of Clinics: 5"]
+    const featuresForEnterprise = ["Everything from Pro", "Custom SLA", "Role-Based Permissions", "24/7 Email Support", "24/7 Call Support", "Number Of Doctors: Unlimited", "Number of Receptionists: Unlimited", "Number of Clinics: Unlimited"];
 
     const PricingBasic = {
-        yearly: 200,
-        monthly: 20
+        yearly: 800,
+        monthly: 75
     }
     const PricingPro = {
-        yearly: 1000,
-        monthly: 100
+        yearly: 2750,
+        monthly: 250
     }
 
     const [isYearly, setIsYearly] = useState(true);
@@ -50,7 +50,10 @@ export default function Pricing() {
                                 <div>{e}</div>
                             </div>)}
                         </div>
-                        <Button className="w-full text-lg" size="small" label="Signup" />
+                        <div>
+                            <div className="text-sm mb-1"><span className="text-red-500">*</span>Credit Card Required</div>
+                            <Button className="w-full text-lg" size="small" label="Start 14-day Trial" />
+                        </div>
                     </div>
                     <div className="max-w-30rem w-full flex flex-column gap-3 surface-200 p-3 border-round-md">
                         <div className="text-center">
@@ -64,7 +67,7 @@ export default function Pricing() {
                                 <div>{e}</div>
                             </div>)}
                         </div>
-                        <Button className="w-full text-lg" size="small" label="Signup" />
+                        <Button className="w-full text-lg" size="small" label="Get Started" />
                     </div>
                     <div className="max-w-30rem w-full flex flex-column gap-3 surface-200 p-3 border-round-md">
                         <div className="text-center">
@@ -79,7 +82,7 @@ export default function Pricing() {
                             </div>)}
                         </div>
                         <Link href={"/contactus"}>
-                            <Button className="w-full text-lg" severity="success" size="small" label="Contact Us" />
+                            <Button className="w-full text-lg" severity="success" size="small" label="Contact Sales" />
                         </Link>
                     </div>
                 </div>
