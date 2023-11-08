@@ -6,29 +6,41 @@ import Link from "next/link";
 export default function FAQPage() {
 
     const AccordionFAQ = [{
-        question: `What is a patient management system?`,
-        answer: `A Patient Management System (PMS) is a tool that streamlines processes within a medical practice or hospital. 
-        Our system can schedule appointments, evaluations, treatment, and discharges. 
-        Save time for your staff and patients through electronic forms, online payment processing, email/SMS notifications and more.`
+        question: `What is a Patient Engagement Platform (P.E.P)?`,
+        answer: <div>
+            <div>A patient engagement platform (P.E.P) is a digital application that patients can use to access their electronic medical record via smartphone, tablet or computer (1).
+                Our system can schedule appointments, evaluations, treatment, and discharges. Medical Professionals can monitor the patient remotely with in-app messaging & video calling and request pain scores from their patient.
+                Save time for your staff and patients through electronic forms, online payment processing, email/SMS notifications and more.</div>
+            <a className="mt-4 text-xs text-primary-500" href="https://www.aahks.org/wp-content/uploads/2018/11/AAHKS-white-paper-Patient-Engagement-Platforms.pdf" target="_blank">1. Source: AAHKS Digital Health Committee</a>
+        </div>
     }, {
-        question: `How can a patient management system benefit my healthcare practice?`,
-        answer: `While ${ORG_NAME} manages the repetitive and time consuming tasks, your healthcare practice can focus on giving your patients the best experience, all of which saves time and money.`
+        question: `How can a Patient Engagement Platform benefit my healthcare practice?`,
+        answer: `With ${ORG_NAME}, your healthcare practice can benefit from remote guidance and monitoring so less in-person visits are required. 
+        Data collection and metrics of patients can provide valuable insight on a variety of benchmarks for patients, and healthcare professionals. 
+        Your patients will become more involved with their healthcare, thus improving their connection towards healthcare professionals and enhancing the overall experience.`
     }, {
         question: `Can ${ORG_NAME} be customized to our specific needs?`,
-        answer: `Our BASIC and PRO plans have several features to provide flexibility in the ways you use our system. 
-        If you require more customizability, contact us and we can try arrange a solution through our ENTERPRISE plan.`
+        answer: `The Patient plans offer features which allow for limited flexibiltiy. Our BASIC and PRO plans for HealthCare Providers have several features to provide flexibility in the ways you use our system. 
+        If your healthcare practice requires more customizability, contact us and we can try arrange a solution through our ENTERPRISE plan.`
     }, {
+        question: `I'm unable to login or visit to ${ORG_NAME}`,
+        answer: <div>
+            {ORG_NAME} may be under scheduled maintenance or unexpected downtime. You can check our <Link className="text-primary-500" href={"/status"}>status page</Link><br /><br />
+            If you are a patient, you can send an email to <a className="text-primary-500" href={`mailto:support@${ORG_NAME.toLowerCase()}.ca`}>support@{ORG_NAME.toLowerCase()}.ca</a><br />
+            If you are a medical professional, please contact your medical employer directly.
+        </div>
+    }, {
+        question: `Do you offer deals or discounts for non-profit healthcare providers?`,
+        answer: <div>Yes! We truly value the work that non-profits contribute to provider healthcare for those who need it most. <Link className="text-primary-500" href={"/contactus"}>Contact us</Link> for assistance.</div>
+    },
+    {
         question: `What security measures are in place to protect patient data in the system?`,
         answer: `Our team has carefully constructed ${ORG_NAME} to implement the latest security standards, including HIPPA and GDRP, so that you and your patients data is secure. 
         We continously test our systems with third-party cybersecurity specialists and perform bi-annually security audits.`
     }, {
-        question: `Is there a mobile app or web portal for patients to access their own information?`,
-        answer: `Your patients can visit our website and with a ${ORG_NAME} account, they can view their information. 
-        While there is no mobile application, our website is responsive to all types of devices.`
-    }, {
         question: `Can the system be integrated with other healthcare software or third-party applications?`,
-        answer: `Of course! Whether you have other healthcare software or are looking to transfer over to ${ORG_NAME}, we've got you covered. 
-        If you think there is an integration we should add, feel free to contact us.`
+        answer: <div>Of course! Whether you have other healthcare software or are looking to transfer over to ${ORG_NAME}, we've got you covered.
+            If you think there is an integration we should add, feel free to <Link className="text-primary-500" href={"/contactus"}>contact us.</Link></div>
     }]
 
     return (

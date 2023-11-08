@@ -11,6 +11,7 @@ import { InputText } from 'primereact/inputtext';
 import { Rating } from "primereact/rating";
 import { InputMask } from 'primereact/inputmask';
 import { classNames } from 'primereact/utils';
+import MobileAppPromo from '../components/MobileAppPromo';
 
 export default function Home() {
   return (
@@ -71,14 +72,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='w-10 mx-auto'>
-          <Divider />
-        </div>
+        <Divider className="w-10 mx-auto" />
 
         <SupportedCompanyLogos />
 
         <div className='my-6 text-xl w-10 mx-auto text-center'>
-          The healthcare process is complicated, but it doesn't have to be.
+          The healthcare system can be complicated, but it doesn't have to be.
           Thanks to {ORG_NAME}, both providers and patients can be better involved in providing a better, collaborative experience in the healthcare industry.
           Goodbye to confusing diagnostic and medical reports, prodecures, and prescriptions. Say hello to the future.
         </div>
@@ -91,9 +90,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='w-10 mx-auto'>
-          <Divider />
-        </div>
+        <Divider className="w-10 mx-auto" />
 
         <div className='w-10 mx-auto mb-6'>
           <h1 className='text-center'>Statistics</h1>
@@ -128,33 +125,16 @@ export default function Home() {
           <div className='mt-2 text-center'>Missing feature? <Link className='text-primary-500' href={"/contactus"}>Request it</Link></div>
         </div>
 
-        <div className='w-10 mx-auto'>
-          <Divider />
-        </div>
+        <Divider className="w-10 mx-auto" />
 
         <div>
           <h1 className='text-center'>Testimonials</h1>
           <ProductReview />
         </div>
 
-        <div className='w-10 mx-auto'>
-          <Divider />
-        </div>
+        <Divider className="w-10 mx-auto" />
 
-        <div className='text-xl mx-auto max-w-30rem mb-4 flex flex-column align-items-center text-center'>
-          Download the {ORG_NAME} app today.
-          <div className='mt-2'>
-            <Image height='48px' src='/iphone_app_store.png' />
-            <Image className='ml-2' height='48px' src="android_play_store.png" />
-          </div>
-          <Divider className='w-full my-1' align="center">OR</Divider>
-          Get the link to your phone
-          <div className="mt-2 p-inputgroup flex-1">
-            <InputMask mask="(999) 999-9999" placeholder={ORG_PHONE_NUMBER_FORMATTED} />
-            <Button label='Submit' className="p-button-primary" />
-          </div>
-        </div>
-
+        <MobileAppPromo />
       </main>
     </div>
   );
@@ -189,6 +169,10 @@ function SupportedCompanyLogos() {
           <Image height={TotalHeight} src='/HealthcareProviders/OptimumHealthCare.webp' />
           <Image height={TotalHeight} src='/HealthcareProviders/ReedGroup.png' />
           <Image height={TotalHeight} src='/HealthcareProviders/WellCareHealthPlans.png' />
+          <Image height={TotalHeight} src='/HealthcareProviders/FraserHealth.png' />
+          <Image height={TotalHeight} src='/HealthcareProviders/BCChildrenHospital.png' />
+          <Image height={TotalHeight} src='/HealthcareProviders/CoastalHealth.png' />
+          <Image height={TotalHeight} src='/HealthcareProviders/HeartOfHealthCare.png' />
         </div>
       </div>
     </div>
@@ -210,7 +194,7 @@ function ProductReview() {
     message: `Thanks to ${ORG_NAME}, we're delivering top-notch service and seeing remarkable growth in our healthcare practice.`
   }, {
     name: "Walter White",
-    image: "/BryanCranston.jpg",
+    image: "/WalterWhite.jpg",
     positionAndCompany: `Co-Founder of Gray Matter Technologies`,
     message: `Gray Matter Technologies focuses on pushing boundaries and changing lives. ${ORG_NAME}'s patient engagement platform does the same.`
   }, {

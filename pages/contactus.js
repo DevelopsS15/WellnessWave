@@ -1,9 +1,8 @@
 import Head from "next/head";
 import { ORG_NAME } from "../components/global";
-import { Button } from "primereact/button";
 import ContactForm from "../components/ContactForm";
 
-export default function ContactUS() {
+export default function ContactUs() {
     return (
         <div>
             <Head>

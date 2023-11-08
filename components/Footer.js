@@ -19,6 +19,9 @@ const Footer = () => <footer className='w-full py-4 px-auto surface-200'>
             <div>
                 Copyright &copy; WellnessWave {new Date().getFullYear()}. All Rights Reserved.
             </div>
+            <div className="mt-2">
+                {ORG_NAME} would like to recognize and acknowledge that our headquarters are situated in the traditional territory of the Stó:lō peoples.
+            </div>
             <div className="flex justify-content-center">
                 <FooterMedia url="https://ufv.ca/" icon="pi-globe" />
                 <FooterMedia url="https://www.facebook.com/goUFV/" icon="pi-facebook" />

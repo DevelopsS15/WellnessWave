@@ -16,8 +16,3 @@ TODO:
     
     Overall:
     Generate convincing PMS text
-    Add Support Agent bubble bottom right
-
-
-Fraser Health
-Coastal Health

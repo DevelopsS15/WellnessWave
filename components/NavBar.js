@@ -16,11 +16,11 @@ const NavBar = () => {
                 <Link href={"/about"}>
                     <Button label="About" severity='primary' text />
                 </Link>
-                <Link href={"/faq"}>
-                    <Button label="FAQ" severity='primary' text />
-                </Link>
                 <Link href={"/contactus"}>
                     <Button label="Contact Us" severity='primary' text />
+                </Link>
+                <Link href={"/faq"}>
+                    <Button label="FAQ" severity='primary' text />
                 </Link>
                 <Link href={"/pricing"}>
                     <Button label="Pricing" severity='primary' text />
