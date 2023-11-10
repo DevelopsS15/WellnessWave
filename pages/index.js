@@ -28,7 +28,7 @@ export default function Home() {
           <div className='absolute w-full mx-auto' style={{ top: 0, left: 0 }}>
             <div className='flex flex-column justify-content-center align-items-center text-50' style={{ height: 720 }}>
               <div className="text-6xl font-bold">WellnessWave</div>
-              <div className='text-3xl'>The Missing Piece for Better Patient Care</div>
+              <div className='text-3xl text-center'>The Missing Piece for Better Patient Care</div>
               <div className='mt-2'>
                 <Link href={"/signup"}>
                   <Button label='Get Started' />
@@ -41,13 +41,13 @@ export default function Home() {
           Photo by <a className='text-primary-500' href="https://unsplash.com/@mdominguezfoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Martha Dominguez de Gouveia</a> on <a className='text-primary-500' href="https://unsplash.com/photos/white-concrete-counter-stand-nMyM7fxpokE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         </div>
 
-        <div className='flex w-10 mx-auto my-6 gap-6'>
+        <div className='flex flex-column md:flex-row w-10 mx-auto my-6 gap-6'>
           <div className='text-xl w-full flex-1 flex flex-column align-items-center justify-content-center'>
             <div>
-              {ORG_NAME} aims to simplify the healthcare for the millions of patients across North America by providing easy to navigate, secure web and mobile applications.
+              <strong>{ORG_NAME}</strong> aims to simplify the <strong>healthcare</strong> for the millions of patients across North America with its <strong>Patient Engagement Platform</strong> by providing easy to navigate, secure web and mobile applications.
             </div>
             <div className='mt-6 text-center flex flex-column align-items-center'>
-              Rated #1 in North America*
+              <span>Rated <strong>#1</strong> in North America*</span>
               <Rating className='mt-2' pt={{
                 onIcon: {
                   style: {
@@ -74,6 +74,23 @@ export default function Home() {
 
         <Divider className="w-10 mx-auto" />
 
+        <div className='w-10 mx-auto'>
+          <h1 className='text-center'>Features</h1>
+          <div className='flex flex-column md:flex-row gap-2 md:gap-6'>
+            <FeatureBox icon="pi-clock" title="Time Management" message={"Save yourself time trying to find the medical information important for you. Our UI and advanced search eases the entire process."} />
+            <FeatureBox icon="pi-lock" title="Security" message={"We continously test our systems with third-party cybersecurity specialists and perform bi-annually security audits to secure your data from cyberattacks."} />
+            <FeatureBox icon="pi-book" title="Regulations" message={"Our team strictly adheres to HIPPA and GDRP standards and regulations to protect your data. We are also in compliance with PCI DSS Level 1."} />
+          </div>
+          <div className='flex flex-column md:flex-row gap-2 md:gap-6 mt-2 md:mt-4'>
+            <FeatureBox icon="pi pi-users" title="Patient Care" message={"Improve patient care through a collaborative experience that builds a stronger relationship between patients and their healthcare providers."} />
+            <FeatureBox icon="pi pi-chart-bar" title="Detailed Analytics" message={`Easily compare data to millions of patients anonymously, detect abnormalities and witness common trends with our exhaustive set of features and data tracking.`} />
+            <FeatureBox icon="pi pi-language" title="International Support" message={"Experience a platform that celebrates diversity with support for over 25 languages and inclusive accessibility features for everyone."} />
+          </div>
+          <div className='mt-2 text-center'>Missing feature? <Link className='text-primary-500' href={"/contactus"}>Request it</Link></div>
+        </div>
+
+        <Divider className="w-10 mx-auto" />
+
         <SupportedCompanyLogos />
 
         <div className='my-6 text-xl w-10 mx-auto text-center'>
@@ -92,9 +109,13 @@ export default function Home() {
 
         <Divider className="w-10 mx-auto" />
 
-        <div className='w-10 mx-auto mb-6'>
-          <h1 className='text-center'>Statistics</h1>
-          <div className='flex gap-6'>
+        <div>
+          <h1 className='text-center'>Testimonials</h1>
+          <ProductReview />
+        </div>
+
+        <div className='w-10 mx-auto mt-6'>
+          <div className='flex flex-column md:flex-row gap-2 md:gap-6'>
             <div className='p-3 surface-200 text-center flex-1 border-round-md'>
               <div className='text-4xl text-primary-500 font-bold'>78%</div>
               <div className='text-xl'>Greater Patient Involvement</div>
@@ -108,28 +129,6 @@ export default function Home() {
               <div className='text-xl'>Supported Providers</div>
             </div>
           </div>
-        </div>
-
-        <div className='w-10 mx-auto mb-6'>
-          <h1 className='text-center'>Features</h1>
-          <div className='flex gap-6'>
-            <FeatureBox icon="pi-clock" title="Time Management" message={"Save yourself time trying to find the information important for you. Our UI and advanced search eases the entire process."} />
-            <FeatureBox icon="pi-lock" title="Security" message={"We continously test our systems with third-party cybersecurity specialists and perform bi-annually security audits to secure your data from cyberattacks."} />
-            <FeatureBox icon="pi-book" title="Regulations" message={"Our team strictly adheres to HIPPA and GDRP standards and regulations to protect your data."} />
-          </div>
-          <div className='flex gap-6 mt-4'>
-            <FeatureBox icon="pi pi-clock" title="Feature #1" message={"Message"} />
-            <FeatureBox icon="pi pi-clock" title="Feature #1" message={"Message"} />
-            <FeatureBox icon="pi pi-clock" title="Feature #1" message={"Message"} />
-          </div>
-          <div className='mt-2 text-center'>Missing feature? <Link className='text-primary-500' href={"/contactus"}>Request it</Link></div>
-        </div>
-
-        <Divider className="w-10 mx-auto" />
-
-        <div>
-          <h1 className='text-center'>Testimonials</h1>
-          <ProductReview />
         </div>
 
         <Divider className="w-10 mx-auto" />
@@ -211,7 +210,7 @@ function ProductReview() {
   }, ActiveMessageInterval * 1000, true);
 
   const review = Reviews[activeMessage];
-  return (<div className='mx-auto max-w-30rem surface-200 border-round-top-sm'>
+  return (<div className='mx-auto w-10 max-w-30rem surface-200 border-round-top-sm'>
     <div className='flex flex-column align-items-center p-4'>
       <div><Image pt={{
         image: {

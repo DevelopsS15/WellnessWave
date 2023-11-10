@@ -24,6 +24,7 @@ export default function Pricing() {
         "Phone Support"
     ]
     const featuresForBasic = ["Electronic Medical Records",
+        "99.9% Guaranteed Uptime",
         "Appointment Calendar",
         "Expense Management",
         "Email Notifications",
@@ -33,7 +34,7 @@ export default function Pricing() {
         "Number of Clinics: 1",
         "1,000 Free Patients (+$0.05/patient/month)"];
     const featuresForPro = ["Everything from Basic",
-        "99.91% Guaranteed Uptime",
+        "99.95% Guaranteed Uptime",
         "1,000 SMS included",
         "SLO/SAML Authentication",
         "Email Support",
@@ -44,7 +45,7 @@ export default function Pricing() {
         "10,000 Free Patients (+$0.03/patient/month)"
     ]
     const featuresForEnterprise = ["Everything from Pro",
-        "99.95% Guaranteed Uptime",
+        "99.99% Guaranteed Uptime",
         "Custom SLA",
         "Role-Based Permissions",
         "24/7 Email Support",
@@ -81,7 +82,7 @@ export default function Pricing() {
                 <link rel="icon" href="/WellnessWave256x256.png" />
             </Head>
             <main style={{ minHeight: "100vh" }}>
-                <div className="mt-6 mb-4 mx-auto text-center">
+                <div className="mt-6 mb-4 w-10 mx-auto text-center">
                     <h1 className="mb-2">Pricing</h1>
                     <div>We offer pricing for both patients and healthcare providers so everyone can benefit from {ORG_NAME}</div>
                 </div>
@@ -92,7 +93,8 @@ export default function Pricing() {
                 <div className="mb-2">
                     <PaymentInterval isYearly={isYearly} setIsYearly={setIsYearly} />
                 </div>
-                <div className="flex justify-content-center gap-6">
+                {/* flex-column align-items-center md:flex-row md:align-items-start  */}
+                <div className="flex flex-column align-items-center lg:flex-row lg:align-items-stretch justify-content-center gap-6">
                     <div className="max-w-30rem w-full flex flex-column gap-3 surface-200 p-3 border-round-md">
                         <div className="text-center">
                             <div className="text-3xl font-bold">Starter</div>
@@ -132,8 +134,9 @@ export default function Pricing() {
                 <div className="mb-2">
                     <PaymentInterval isYearly={isYearly} setIsYearly={setIsYearly} />
                 </div>
-                <div className="flex justify-content-center gap-6 mb-6">
-                    <div className="max-w-30rem w-full flex flex-column gap-3 surface-200 p-3 border-round-md">
+                <div className="w-full grid justify-content-center gap-6 mt-2 mb-6">
+                    {/* <div className="flex justify-content-center gap-6 mb-6"> */}
+                    <div className="col-4 max-w-30rem w-full flex flex-column gap-3 surface-200 p-3 border-round-md">
                         <div className="text-center">
                             <div className="text-3xl font-bold">Basic</div>
                             <div className="text-2xl font-bold">${isYearly ? PricingBasic.yearly : PricingBasic.monthly}/{PricingModeText}</div>
@@ -150,7 +153,7 @@ export default function Pricing() {
                             <Button className="w-full text-lg" size="small" label="Start 14-day Trial" />
                         </div>
                     </div>
-                    <div className="max-w-30rem w-full flex flex-column gap-3 surface-200 p-3 border-round-md">
+                    <div className="col-4 max-w-30rem w-full flex flex-column gap-3 surface-200 p-3 border-round-md">
                         <div className="text-center">
                             <div className="text-3xl font-bold">Pro</div>
                             <div className="text-2xl font-bold">${isYearly ? PricingPro.yearly : PricingPro.monthly}/{PricingModeText}</div>
@@ -164,7 +167,7 @@ export default function Pricing() {
                         </div>
                         <Button className="w-full text-lg" size="small" label="Get Started" />
                     </div>
-                    <div className="max-w-30rem w-full flex flex-column gap-3 surface-200 p-3 border-round-md">
+                    <div className="col-4 max-w-30rem w-full flex flex-column gap-3 surface-200 p-3 border-round-md">
                         <div className="text-center">
                             <div className="text-3xl font-bold">Enterprise</div>
                             <div className="text-2xl font-bold">CUSTOM</div>

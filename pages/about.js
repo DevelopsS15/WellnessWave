@@ -58,10 +58,11 @@ export default function About() {
 
                 </div>
                 <div className="w-10 mx-auto">
-                    <div className="w-8 mx-auto flex gap-4 align-items-center">
+                    <div className="w-full md:w-8 mx-auto flex flex-column-reverse md:flex-row gap-4 align-items-center">
                         <div className="flex-1">
-                            <Image className=" w-10" src="/MedicalAboutUs.jpg" pt={{
+                            <Image className="w-10" src="/MedicalAboutUs.jpg" pt={{
                                 image: {
+                                    className: "w-full md:w-auto",
                                     style: {
                                         borderRadius: "0.25em 1em 0.25em 1em"
                                     }
@@ -86,7 +87,7 @@ export default function About() {
                         <div>
                             <Image src="/WellnessWaveTeam.jpg" pt={{
                                 image: {
-                                    className: "w-8 border-round-xl"
+                                    className: "w-full md:w-8 border-round-xl"
                                 }
                             }} alt="The WellnessWave Team" />
                             <div className="text-xs">
@@ -112,7 +113,7 @@ export default function About() {
     );
 }
 
-const InvestorTemplate = ({ investor, noRound = false }) => <div className='col-3 border-round-top-sm'>
+const InvestorTemplate = ({ investor, noRound = false }) => <div className='col-6 md:col-3 border-round-top-sm'>
     <div className='flex flex-column align-items-center'>
         <div><Image pt={{
             image: {

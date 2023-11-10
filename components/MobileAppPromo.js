@@ -4,7 +4,7 @@ import { Divider } from "primereact/divider";
 import { InputMask } from "primereact/inputmask";
 import { Button } from "primereact/button";
 
-const MobileAppPromo = () => <div className='text-xl mx-auto max-w-30rem mb-4 flex flex-column align-items-center text-center'>
+const MobileAppPromo = () => <div className='text-xl mx-auto w-11 max-w-30rem mb-4 flex flex-column align-items-center text-center'>
     Download the {ORG_NAME} app today.
     <div className='mt-2'>
         <Image height='48px' src='/iphone_app_store.png' />

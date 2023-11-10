@@ -10,7 +10,7 @@ export default function ContactUs() {
                 <link rel="icon" href="/WellnessWave256x256.png" />
             </Head>
             <main style={{ height: "100vh" }}>
-                <div className='max-w-30rem my-4 border-round-lg mx-auto p-5'>
+                <div className='w-10 max-w-30rem my-4 border-round-lg mx-auto'>
                     <div className="text-3xl">Contact Us</div>
                     <div className="mb-4">Our team will respond to any inquiries you may have.</div>
                     <ContactForm />
