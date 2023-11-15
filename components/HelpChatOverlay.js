@@ -4,10 +4,13 @@ import { OverlayPanel } from 'primereact/overlaypanel';
 import { Image } from 'primereact/image';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { ORG_NAME } from './global';
+import { Tooltip } from 'primereact/tooltip';
+import { ConfirmPopup } from 'primereact/confirmpopup';
 
 export default function HelpChatOverlay() {
     const op = useRef(null);
     const ToggleOverlayPanel = (e) => op.current.toggle(e);
+    const confirmDialogPopupRef = useRef(null);
     return (<>
         <OverlayPanel className='w-3' ref={op}>
             <div className='flex align-items-center'>
@@ -42,12 +45,13 @@ export default function HelpChatOverlay() {
                 <Button icon="pi pi-send" className="p-button-success" />
             </div>
         </OverlayPanel>
-        <div className='fixed' style={{
+        <Tooltip target={"#helpchatquestionbutton"} position='left' content='If you need help, we are always here!' />
+        <div id='helpchatquestionbutton' className='fixed' style={{
             zIndex: 1000,
             bottom: 80,
             right: 20,
         }}>
-            <Button rounded icon="pi pi-question" onClick={ToggleOverlayPanel} />
+            <Button ref={confirmDialogPopupRef} rounded icon="pi pi-question" onClick={ToggleOverlayPanel} />
         </div>
     </>)
 }

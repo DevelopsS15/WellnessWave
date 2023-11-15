@@ -15,7 +15,7 @@ import MobileAppPromo from '../components/MobileAppPromo';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>{ORG_NAME}</title>
         <link rel="icon" href="/WellnessWave256x256.png" />
@@ -30,7 +30,7 @@ export default function Home() {
               <div className="text-6xl font-bold">WellnessWave</div>
               <div className='text-3xl text-center'>The Missing Piece for Better Patient Care</div>
               <div className='mt-2'>
-                <Link href={"/signup"}>
+                <Link href={"/pricing"}>
                   <Button label='Get Started' />
                 </Link>
               </div>
@@ -96,7 +96,7 @@ export default function Home() {
         <div className='my-6 text-xl w-10 mx-auto text-center'>
           The healthcare system can be complicated, but it doesn't have to be.
           Thanks to {ORG_NAME}, both providers and patients can be better involved in providing a better, collaborative experience in the healthcare industry.
-          Goodbye to confusing diagnostic and medical reports, prodecures, and prescriptions. Say hello to the future.
+          Goodbye to confusing diagnostic and medical reports, procedures, and prescriptions. Say hello to the future.
         </div>
 
         <div className='w-10 mb-4 text-xl max-w-30rem mx-auto text-center'>
@@ -135,7 +135,7 @@ export default function Home() {
 
         <MobileAppPromo />
       </main>
-    </div>
+    </>
   );
 }
 

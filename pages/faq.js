@@ -39,12 +39,12 @@ export default function FAQPage() {
         We continously test our systems with third-party cybersecurity specialists and perform bi-annually security audits.`
     }, {
         question: `Can the system be integrated with other healthcare software or third-party applications?`,
-        answer: <div>Of course! Whether you have other healthcare software or are looking to transfer over to ${ORG_NAME}, we've got you covered.
+        answer: <div>Of course! Whether you have other healthcare software or are looking to transfer over to {ORG_NAME}, we've got you covered.
             If you think there is an integration we should add, feel free to <Link className="text-primary-500" href={"/contactus"}>contact us.</Link></div>
     }]
 
     return (
-        <div>
+        <>
             <Head>
                 <title>Frequently Asked Questions - {ORG_NAME}</title>
                 <link rel="icon" href="/WellnessWave256x256.png" />
@@ -63,6 +63,6 @@ export default function FAQPage() {
                     </div>
                 </div>
             </main>
-        </div>
+        </>
     );
 }

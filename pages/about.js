@@ -54,15 +54,12 @@ export default function About() {
                 <link rel="icon" href="/WellnessWave256x256.png" />
             </Head>
             <main style={{ minHeight: "100vh" }}>
-                <div className='max-w-30rem my-4 border-round-lg mx-auto p-5'>
-
-                </div>
-                <div className="w-10 mx-auto">
-                    <div className="w-full md:w-8 mx-auto flex flex-column-reverse md:flex-row gap-4 align-items-center">
-                        <div className="flex-1">
-                            <Image className="w-10" src="/MedicalAboutUs.jpg" pt={{
+                <div className="w-full mx-auto mt-8">
+                    <div className="w-full md:w-8 mx-auto flex flex-column lg:flex-row lg:gap-4 align-items-center">
+                        <div className="w-full lg:flex-1 flex flex-column align-items-center">
+                            <Image className="flex justify-content-center" src="/MedicalAboutUs.jpg" pt={{
                                 image: {
-                                    className: "w-full md:w-auto",
+                                    className: "w-10 lg:w-full",
                                     style: {
                                         borderRadius: "0.25em 1em 0.25em 1em"
                                     }
@@ -72,7 +69,7 @@ export default function About() {
                                 Photo by <a className="text-primary-500" target="_blank" href="https://www.istockphoto.com/portfolio/monkeybusinessimages">monkeybusinessimages</a> from <a className="text-primary-500" target="_blank" href="https://www.istockphoto.com/photo/smiling-medical-team-standing-together-outside-a-hospital-gm998313080-270057937">iStockPhotos</a>
                             </div>
                         </div>
-                        <div className="flex-1 text-center">
+                        <div className="w-10 lg:w-full lg:flex-1 text-center">
                             <h1>Who are we?</h1>
                             Since 2015, our team has envisioned a digital platform that revolutionizes the medical industry for both patients and medical professionals.
                             Thanks to our efforts and the support of our investors, we have created {ORG_NAME}, the next-generation of Patient Engagement Platforms. Our headquarters are located in Abbotsford, British Columbia, the traditional territory of the Stó:lō peoples.

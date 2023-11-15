@@ -10,7 +10,6 @@ TODO:
     Features (Clinicia)
 
     Header:
-    Phone #/Email for Sales in header
 
     Footer:
     

@@ -76,7 +76,7 @@ export default function Pricing() {
     const [isYearly, setIsYearly] = useState(true);
     const PricingModeText = isYearly ? "year" : "month";
     return (
-        <div>
+        <>
             <Head>
                 <title>{ORG_NAME}</title>
                 <link rel="icon" href="/WellnessWave256x256.png" />
@@ -140,7 +140,7 @@ export default function Pricing() {
                         <div className="text-center">
                             <div className="text-3xl font-bold">Basic</div>
                             <div className="text-2xl font-bold">${isYearly ? PricingBasic.yearly : PricingBasic.monthly}/{PricingModeText}</div>
-                            <div>Experience some of our many features prior to upgrading</div>
+                            <div>Experience a subset of our features</div>
                         </div>
                         <div className="flex-grow-1 flex flex-column gap-2">
                             {featuresForBasic.map((e, index) => <div key={index} className="flex gap-2">
@@ -184,16 +184,10 @@ export default function Pricing() {
                         </Link>
                     </div>
                 </div>
-
-
-
-                {/* Photo by <a href="https://unsplash.com/@mdominguezfoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Martha Dominguez de Gouveia</a> on <a href="https://unsplash.com/photos/white-concrete-counter-stand-nMyM7fxpokE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-       */}
             </main>
-        </div>
+        </>
     );
 }
-
 
 function PaymentInterval(props) {
     return (<div className="flex justify-content-center align-items-center gap-3 text-lg font-bold">

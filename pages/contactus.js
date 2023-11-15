@@ -4,7 +4,7 @@ import ContactForm from "../components/ContactForm";
 
 export default function ContactUs() {
     return (
-        <div>
+        <>
             <Head>
                 <title>Contact Us - {ORG_NAME}</title>
                 <link rel="icon" href="/WellnessWave256x256.png" />
@@ -16,6 +16,6 @@ export default function ContactUs() {
                     <ContactForm />
                 </div>
             </main>
-        </div>
+        </>
     );
 }

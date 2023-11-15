@@ -3,6 +3,7 @@ import { ORG_ADDRESS, ORG_EMAIL, ORG_NAME, ORG_PHONE_NUMBER } from "./global";
 import { Button } from "primereact/button";
 import { classNames } from "primereact/utils";
 import { InputText } from "primereact/inputtext";
+import Link from "next/link";
 
 const Footer = () => <footer className='w-full py-4 px-auto surface-200'>
     <div className='w-11 h-full m-auto flex flex-column lg:flex-row gap-4 align-items-center'>
@@ -28,6 +29,7 @@ const Footer = () => <footer className='w-full py-4 px-auto surface-200'>
                 <FooterMedia url="https://twitter.com/goUFV" icon="pi-twitter" />
                 <FooterMedia url="https://www.instagram.com/goUFV/" icon="pi-instagram" />
             </div>
+            <div><Link className="flex gap-1 justify-content-center align-items-center no-underline" href={"/status"}><i className={"pi pi-check-circle font-bold text-green-500"} /><span className="text-primary-500 underline">Status</span></Link></div>
         </div>
     </div>
 </footer>
