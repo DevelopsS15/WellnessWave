@@ -5,7 +5,17 @@ import { InputMask } from "primereact/inputmask";
 import { Button } from "primereact/button";
 
 const MobileAppPromo = () => <div className='text-xl mx-auto w-11 max-w-30rem mb-4 flex flex-column align-items-center text-center'>
-    Download the {ORG_NAME} app today.
+    <div>
+        <Image src='/undraw_mobile_user_re_xta4.svg' pt={{
+            image: {
+                style: {
+                    maxHeight: "256px"
+                },
+                className: "w-full"
+            }
+        }} />
+    </div>
+    <div>Download the {ORG_NAME} app today.</div>
     <div className='mt-2'>
         <Image height='48px' src='/iphone_app_store.png' />
         <Image className='ml-2' height='48px' src="android_play_store.png" />
