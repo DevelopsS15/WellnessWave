@@ -1,16 +1,42 @@
 import { Button } from 'primereact/button';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { Image } from 'primereact/image';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { ORG_NAME } from './global';
 import { Tooltip } from 'primereact/tooltip';
-import { ConfirmPopup } from 'primereact/confirmpopup';
+import { ConfirmPopup, confirmPopup } from 'primereact/confirmpopup';
+
+const HelpChatLocalStorageKey = "HELP_CHAT";
 
 export default function HelpChatOverlay() {
     const op = useRef(null);
-    const ToggleOverlayPanel = (e) => op.current.toggle(e);
+    const ToggleOverlayPanel = (e) => {
+        op.current.toggle(e)
+        console.log(e);
+    };
     const confirmDialogPopupRef = useRef(null);
+    const helpChatButtonRef = useRef(null);
+
+    useEffect(() => {
+        if (confirmDialogPopupRef.current) {
+            try {
+                const helpChatLocalStorageValue = localStorage.getItem(HelpChatLocalStorageKey);
+                if (helpChatLocalStorageValue) return;
+                confirmPopup({
+                    target: confirmDialogPopupRef.current,
+                    message: "If you need help, we are always here!",
+                    accept: () => helpChatButtonRef.current?.click(),
+                    acceptLabel: "I need help",
+                    rejectLabel: "Okay",
+                })
+                localStorage.setItem(HelpChatLocalStorageKey, true);
+            } catch (e) {
+                console.error(`Unable to display overlay panel for needing help.`);
+            }
+        }
+    }, [confirmDialogPopupRef])
+
     return (<>
         <OverlayPanel className='w-3' ref={op}>
             <div className='flex align-items-center'>
@@ -45,13 +71,13 @@ export default function HelpChatOverlay() {
                 <Button icon="pi pi-send" className="p-button-success" />
             </div>
         </OverlayPanel>
-        <Tooltip target={"#helpchatquestionbutton"} position='left' content='If you need help, we are always here!' />
-        <div id='helpchatquestionbutton' className='fixed' style={{
+        <ConfirmPopup />
+        <div ref={confirmDialogPopupRef} className='fixed' style={{
             zIndex: 1000,
             bottom: 80,
             right: 20,
         }}>
-            <Button ref={confirmDialogPopupRef} rounded icon="pi pi-question" onClick={ToggleOverlayPanel} />
+            <Button ref={helpChatButtonRef} rounded icon="pi pi-question" onClick={ToggleOverlayPanel} />
         </div>
     </>)
 }
