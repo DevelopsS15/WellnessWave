@@ -78,7 +78,7 @@ export default function Pricing() {
     return (
         <>
             <Head>
-                <title>{ORG_NAME}</title>
+                <title>Pricing - {ORG_NAME}</title>
                 <link rel="icon" href="/WellnessWave256x256.png" />
             </Head>
             <main style={{ minHeight: "100vh" }}>
