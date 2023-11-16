@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { ORG_EMAIL, ORG_NAME, ORG_PHONE_NUMBER_FORMATTED } from '../components/global';
+import { ORG_EMAIL, ORG_NAME, ORG_NEWSLETTER_EMAIL, ORG_PHONE_NUMBER_FORMATTED } from '../components/global';
 import { Image, Image as PRImage } from 'primereact/image';
 import { Divider } from "primereact/divider"
 import { useState } from 'react';
@@ -76,15 +76,34 @@ export default function Home() {
 
         <div className='w-10 mx-auto'>
           <h1 className='text-center'>Features</h1>
-          <div className='flex flex-column md:flex-row gap-2 md:gap-6'>
-            <FeatureBox icon="pi-clock" title="Time Management" message={"Save yourself time trying to find the medical information important for you. Our UI and advanced search eases the entire process."} />
-            <FeatureBox icon="pi-lock" title="Security" message={"We continously test our systems with third-party cybersecurity specialists and perform bi-annually security audits to secure your data from cyberattacks."} />
-            <FeatureBox icon="pi-book" title="Regulations" message={"Our team strictly adheres to HIPPA and GDRP standards and regulations to protect your data. We are also in compliance with PCI DSS Level 1."} />
-          </div>
-          <div className='flex flex-column md:flex-row gap-2 md:gap-6 mt-2 md:mt-4'>
-            <FeatureBox icon="pi pi-users" title="Patient Care" message={"Improve patient care through a collaborative experience that builds a stronger relationship between patients and their healthcare providers."} />
-            <FeatureBox icon="pi pi-chart-bar" title="Detailed Analytics" message={`Easily compare data to millions of patients anonymously, detect abnormalities and witness common trends with our exhaustive set of features and data tracking.`} />
-            <FeatureBox icon="pi pi-language" title="International Support" message={"Experience a platform that celebrates diversity with support for over 25 languages and inclusive accessibility features for everyone."} />
+          <div className='grid align-items-stretch justify-content-center'>
+            <div className='col-12 md:col-6 lg:col-4'>
+              <FeatureBox icon="pi-clock" title="Time Management" message={"Save yourself time trying to find the medical information important for you. Our UI and advanced search eases the entire process."} />
+            </div>
+            <div className='col-12 md:col-6 lg:col-4'>
+              <FeatureBox icon="pi-lock" title="Security" message={"We continously test our systems with third-party cybersecurity specialists and perform bi-annually security audits to secure your data from cyberattacks."} />
+            </div>
+            <div className='col-12 md:col-6 lg:col-4'>
+              <FeatureBox icon="pi-book" title="Regulations" message={"Our team strictly adheres to HIPPA and GDRP standards and regulations to protect your data. We are also in compliance with PCI DSS Level 1."} />
+            </div>
+            <div className='col-12 md:col-6 lg:col-4'>
+              <FeatureBox icon="pi pi-file-pdf" title="Clear Reports" message={"Have patients get a better understanding of their healthcare with monthly and daily reports that get straight to the point."} />
+            </div>
+            <div className='col-12 md:col-6 lg:col-4'>
+              <FeatureBox icon="pi pi-calendar" title="Easy Scheduling" message={`Schedule an appointment from any device and never miss an appointment again with text, call and push notifications.`} />
+            </div>
+            <div className='col-12 md:col-6 lg:col-4'>
+              <FeatureBox icon="pi pi-users" title="Patient Care" message={"Improve patient care through a collaborative experience that builds a stronger relationship between patients and their healthcare providers."} />
+            </div>
+            <div className='col-12 md:col-6 lg:col-4'>
+              <FeatureBox icon="pi pi-user-plus" title="Excellent Support" message={<>Our dedicated support team is always available to resolve any concerns or problem you are having. <Link className='text-primary-500' href={"/contactus"}>Send us a message anytime</Link></>} />
+            </div>
+            <div className='col-12 md:col-6 lg:col-4'>
+              <FeatureBox icon="pi pi-chart-bar" title="Detailed Analytics" message={`Easily compare data to millions of patients anonymously, detect abnormalities and witness common trends with our exhaustive set of features and data tracking.`} />
+            </div>
+            <div className='col-12 md:col-6 lg:col-4'>
+              <FeatureBox icon="pi pi-language" title="International Support" message={"Experience a platform that celebrates diversity with support for over 25 languages and inclusive accessibility features for everyone."} />
+            </div>
           </div>
           <div className='mt-2 text-center'>Missing feature? <Link className='text-primary-500' href={"/contactus"}>Request it</Link></div>
         </div>
@@ -102,7 +121,7 @@ export default function Home() {
         <div className='w-10 mb-4 text-xl max-w-30rem mx-auto text-center'>
           Subscribe to receive our monthly newsletter.
           <div className="mt-2 p-inputgroup flex-1">
-            <InputText placeholder={ORG_EMAIL} type='email' />
+            <InputText placeholder={ORG_NEWSLETTER_EMAIL} type='email' />
             <Button label='Submit' className="p-button-primary" />
           </div>
         </div>
@@ -140,7 +159,9 @@ export default function Home() {
 }
 
 function FeatureBox({ icon, title, message }) {
-  return (<div className='flex-1 p-3 surface-200 border-round-lg'>
+  return (<div className='flex-1 p-3 surface-200 border-round-lg' style={{
+    height: "100%"
+  }}>
     <div className='flex align-items-center gap-2 text-2xl mb-2 text-primary-500 font-bold'>
       <div className={classNames("pi", "text-2xl", icon)}></div>
       <div>{title}</div>

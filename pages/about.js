@@ -6,7 +6,7 @@ import { Carousel } from 'primereact/carousel';
 import MobileAppPromo from "../components/MobileAppPromo";
 
 const Investors = [{
-    image: "/Investors/JoanneMaclean.jpg",
+    image: "/Investors/Joanne_MacLean.jpg",
     name: "Joanne MacLean",
     positionAndCompany: <>President of the <br />University of the Fraser Valley</>
 }, {
@@ -72,7 +72,7 @@ export default function About() {
                         <div className="w-10 lg:w-full lg:flex-1 text-center">
                             <h1>Who are we?</h1>
                             Since 2015, our team has envisioned a digital platform that revolutionizes the medical industry for both patients and medical professionals.
-                            Thanks to our efforts and the support of our investors, we have created {ORG_NAME}, the next-generation of Patient Engagement Platforms. Our headquarters are located in Abbotsford, British Columbia, the traditional territory of the Stó:lō peoples.
+                            Thanks to our efforts and the support of our investors, we have created {ORG_NAME}, the next-generation of Patient Engagement Platforms. Our headquarters are located in Vancouver, British Columbia, the traditional territory of the Chemainus First Nation (Stz'uminus) peoples.
                         </div>
                     </div>
                     <div style={{

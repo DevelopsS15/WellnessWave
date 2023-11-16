@@ -11,7 +11,7 @@ export default function SiteLayout({ children }) {
         <>
             <ScrollTop />
             <HelpChatOverlay />
-            <Message className='w-full' severity='warn' text={`${ORG_NAME} is still under development`} />
+            {/* <Message className='w-full' severity='warn' text={`${ORG_NAME} is still under development`} /> */}
             <NavBar />
             {children}
             <Footer />
