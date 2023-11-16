@@ -20,23 +20,23 @@ export default function FAQPage() {
         Your patients will become more involved with their healthcare, thus improving their connection towards healthcare professionals and enhancing the overall experience.`
     }, {
         question: `Can ${ORG_NAME} be customized to our specific needs?`,
-        answer: `The Patient plans offer features which allow for limited flexibiltiy. Our BASIC and PRO plans for HealthCare Providers have several features to provide flexibility in the ways you use our system. 
-        If your healthcare practice requires more customizability, contact us and we can try arrange a solution through our ENTERPRISE plan.`
+        answer: `The Patient plans offer features which allow for limited flexibility. Our BASIC and PRO plans for HealthCare Providers have several features to provide flexibility in the ways you use our system. 
+        If your healthcare practice requires more customization options, contact us, and we can try to arrange a solution through our ENTERPRISE plan.`
     }, {
-        question: `I'm unable to login or visit to ${ORG_NAME}`,
+        question: `I'm unable to log in or visit to ${ORG_NAME}`,
         answer: <div>
             {ORG_NAME} may be under scheduled maintenance or unexpected downtime. You can check our <Link className="text-primary-500" href={"/status"}>status page</Link><br /><br />
-            If you are a patient, you can send an email to <a className="text-primary-500" href={`mailto:support@${ORG_NAME.toLowerCase()}.ca`}>support@{ORG_NAME.toLowerCase()}.ca</a><br />
+            If you are a patient, you can email <a className="text-primary-500" href={`mailto:support@${ORG_NAME.toLowerCase()}.ca`}>support@{ORG_NAME.toLowerCase()}.ca</a><br />
             If you are a medical professional, please contact your medical employer directly.
         </div>
     }, {
         question: `Do you offer deals or discounts for non-profit healthcare providers?`,
-        answer: <div>Yes! We truly value the work that non-profits contribute to provider healthcare for those who need it most. <Link className="text-primary-500" href={"/contactus"}>Contact us</Link> for assistance.</div>
+        answer: <div>Yes! We truly value the work that non-profits contribute to provide healthcare for those who need it most. <Link className="text-primary-500" href={"/contactus"}>Contact us</Link> for assistance.</div>
     },
     {
         question: `What security measures are in place to protect patient data in the system?`,
-        answer: `Our team has carefully constructed ${ORG_NAME} to implement the latest security standards, including HIPPA and GDRP, so that you and your patients data is secure. 
-        We continously test our systems with third-party cybersecurity specialists and perform bi-annually security audits.`
+        answer: `Our team has carefully constructed ${ORG_NAME} to implement the latest security standards, including HIPAA and GDRP, so that you and your patients data is secure. 
+        We continuously test our systems with third-party cybersecurity specialists and perform bi-annually security audits.`
     }, {
         question: `Can the system be integrated with other healthcare software or third-party applications?`,
         answer: <div>Of course! Whether you have other healthcare software or are looking to transfer over to {ORG_NAME}, we've got you covered.

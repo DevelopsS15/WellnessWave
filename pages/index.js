@@ -81,10 +81,10 @@ export default function Home() {
               <FeatureBox icon="pi-clock" title="Time Management" message={"Save yourself time trying to find the medical information important for you. Our UI and advanced search eases the entire process."} />
             </div>
             <div className='col-12 md:col-6 lg:col-4'>
-              <FeatureBox icon="pi-lock" title="Security" message={"We continously test our systems with third-party cybersecurity specialists and perform bi-annually security audits to secure your data from cyberattacks."} />
+              <FeatureBox icon="pi-lock" title="Security" message={"We continuously  test our systems with third-party cybersecurity specialists and perform bi-annually security audits to secure your data from cyberattacks."} />
             </div>
             <div className='col-12 md:col-6 lg:col-4'>
-              <FeatureBox icon="pi-book" title="Regulations" message={"Our team strictly adheres to HIPPA and GDRP standards and regulations to protect your data. We are also in compliance with PCI DSS Level 1."} />
+              <FeatureBox icon="pi-book" title="Regulations" message={"Our team strictly adheres to HIPAA and GDRP standards and regulations to protect your data. We are also in compliance with PCI DSS Level 1."} />
             </div>
             <div className='col-12 md:col-6 lg:col-4'>
               <FeatureBox icon="pi pi-file-pdf" title="Clear Reports" message={"Have patients get a better understanding of their healthcare with monthly and daily reports that get straight to the point."} />
@@ -221,7 +221,7 @@ function ProductReview() {
     name: "Elon Musk",
     image: "/ElonMusk.jpg",
     positionAndCompany: "CEO of Tesla, X, & SpaceX",
-    message: `Like Tesla's innovation in electric vehicles, ${ORG_NAME} has been a game-changer for the leading medicial providers who are building a better experience for healthcare.`
+    message: `Like Tesla's innovation in electric vehicles, ${ORG_NAME} has been a game-changer for the leading medical providers who are building a better experience for healthcare.`
   }]
 
   const ActiveMessageInterval = 10;

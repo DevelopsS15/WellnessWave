@@ -130,7 +130,7 @@ export default function Pricing() {
 
                 <Divider className="w-10 mx-auto" />
 
-                <h1 className="text-center mb-2">HealthCare Providers</h1>
+                <h1 className="text-center mb-2">Healthcare Providers</h1>
                 <div className="mb-2">
                     <PaymentInterval isYearly={isYearly} setIsYearly={setIsYearly} />
                 </div>
