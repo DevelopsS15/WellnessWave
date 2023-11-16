@@ -81,10 +81,12 @@ export default function Home() {
               <FeatureBox icon="pi-clock" title="Time Management" message={"Save yourself time trying to find the medical information important for you. Our UI and advanced search eases the entire process."} />
             </div>
             <div className='col-12 md:col-6 lg:col-4'>
-              <FeatureBox icon="pi-lock" title="Security" message={"We continuously  test our systems with third-party cybersecurity specialists and perform bi-annually security audits to secure your data from cyberattacks."} />
+              <FeatureBox icon="pi-lock" title="Security" message={"We continuously test our systems with third-party cybersecurity specialists and perform bi-annually security audits to secure your data from cyberattacks."} />
             </div>
             <div className='col-12 md:col-6 lg:col-4'>
-              <FeatureBox icon="pi-book" title="Regulations" message={"Our team strictly adheres to HIPAA and GDRP standards and regulations to protect your data. We are also in compliance with PCI DSS Level 1."} />
+              <FeatureBox icon="pi-book" title="Regulations" message={<>
+                Our team strictly adheres to <a className='text-primary-500' href='https://www.hhs.gov/hipaa/index.html' target='_blank'>HIPAA</a> and <a className='text-primary-500' href='https://gdpr-info.eu/' target='_blank'>GDRP</a> standards and regulations to protect your data. We are also in compliance with <a className='text-primary-500' href='https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard' target='_blank'>PCI DSS Level 1</a>.
+              </>} />
             </div>
             <div className='col-12 md:col-6 lg:col-4'>
               <FeatureBox icon="pi pi-file-pdf" title="Clear Reports" message={"Have patients get a better understanding of their healthcare with monthly and daily reports that get straight to the point."} />

@@ -35,11 +35,13 @@ export default function FAQPage() {
     },
     {
         question: `What security measures are in place to protect patient data in the system?`,
-        answer: `Our team has carefully constructed ${ORG_NAME} to implement the latest security standards, including HIPAA and GDRP, so that you and your patients data is secure. 
-        We continuously test our systems with third-party cybersecurity specialists and perform bi-annually security audits.`
+        answer: <>
+            Our team has carefully constructed {ORG_NAME} to implement the latest security standards, including <a className='text-primary-500' href='https://www.hhs.gov/hipaa/index.html' target='_blank'>Health Insurance Portability and Accountability Act (HIPAA)</a> and <a className='text-primary-500' href='https://gdpr-info.eu/' target='_blank'>General Data Protection Regulation (GDPR)</a>, so that you and your patients data is secure.
+            All payments are processed in compliance with <a className='text-primary-500' href='https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard' target='_blank'>Payment Card Industry Data Security Standard (PCI DSS) Level 1</a>. We continuously test our systems with third-party cybersecurity specialists and perform bi-annually security audits.
+        </>
     }, {
         question: `Can the system be integrated with other healthcare software or third-party applications?`,
-        answer: <div>Of course! Whether you have other healthcare software or are looking to transfer over to {ORG_NAME}, we've got you covered.
+        answer: <div>Of course! Whether you have other healthcare software or are looking to transfer over to {ORG_NAME}, we have you covered.
             If you think there is an integration we should add, feel free to <Link className="text-primary-500" href={"/contactus"}>contact us.</Link></div>
     }]
 
