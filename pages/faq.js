@@ -51,7 +51,7 @@ export default function FAQPage() {
                 <title>Frequently Asked Questions - {ORG_NAME}</title>
                 <link rel="icon" href="/WellnessWave256x256.png" />
             </Head>
-            <main className="mt-6" style={{ height: "100vh" }}>
+            <main className="mt-6" style={{ minHeight: "100vh" }}>
                 <div className="mx-auto w-10">
                     <div className="text-center mb-4">
                         <h1>Frequently Asked Questions</h1>

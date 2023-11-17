@@ -9,7 +9,7 @@ export default function StatusPage() {
             <title>Status - {ORG_NAME}</title>
             <link rel="icon" href="/WellnessWave256x256.png" />
         </Head>
-        <main style={{ height: "100vh" }}>
+        <main style={{ minHeight: "100vh" }}>
             <div className='w-10 my-4 border-round-lg mx-auto' style={{
                 maxWidth: "720px"
             }}>
