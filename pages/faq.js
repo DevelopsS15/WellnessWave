@@ -3,6 +3,7 @@ import { ORG_NAME } from "../components/global";
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import Link from "next/link";
 
+const title = `Frequently Asked Questions - ${ORG_NAME}`;
 export default function FAQPage() {
 
     const AccordionFAQ = [{
@@ -48,7 +49,7 @@ export default function FAQPage() {
     return (
         <>
             <Head>
-                <title>Frequently Asked Questions - {ORG_NAME}</title>
+                <title>{title}</title>
                 <link rel="icon" href="/WellnessWave256x256.png" />
             </Head>
             <main className="mt-6" style={{ minHeight: "100vh" }}>

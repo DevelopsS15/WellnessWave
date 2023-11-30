@@ -3,10 +3,11 @@ import { ORG_NAME } from "../components/global";
 import { classNames } from "primereact/utils";
 import { Tooltip } from "primereact/tooltip";
 
+const title = `Status - ${ORG_NAME}`;
 export default function StatusPage() {
     return (<>
         <Head>
-            <title>Status - {ORG_NAME}</title>
+            <title>{title}</title>
             <link rel="icon" href="/WellnessWave256x256.png" />
         </Head>
         <main style={{ minHeight: "100vh" }}>

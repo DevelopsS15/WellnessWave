@@ -2,11 +2,12 @@ import Head from "next/head";
 import { ORG_NAME } from "../components/global";
 import ContactForm from "../components/ContactForm";
 
+const title = `Contact Us - ${ORG_NAME}`;
 export default function ContactUs() {
     return (
         <>
             <Head>
-                <title>Contact Us - {ORG_NAME}</title>
+                <title>{title}</title>
                 <link rel="icon" href="/WellnessWave256x256.png" />
             </Head>
             <main style={{ minHeight: "100vh" }}>

@@ -6,6 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Divider } from "primereact/divider";
 
+const title = `Pricing - ${ORG_NAME}`;
 export default function Pricing() {
 
     const featuresForStarter = [
@@ -78,7 +79,7 @@ export default function Pricing() {
     return (
         <>
             <Head>
-                <title>Pricing - {ORG_NAME}</title>
+                <title>{title}</title>
                 <link rel="icon" href="/WellnessWave256x256.png" />
             </Head>
             <main style={{ minHeight: "100vh" }}>
